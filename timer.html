@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Timer</h1>
+
+    <section class="timer-container">
+      <div class="timer-circle-box">
+        <svg class="progress-ring" width="300" height="300">
+          <circle class="progress-ring-bg" stroke="#e5e5ea" stroke-width="10" fill="transparent" r="140" cx="150" cy="150"/>
+          <circle class="progress-ring-bar" stroke="#007aff" stroke-width="10" stroke-linecap="round" fill="transparent" r="140" cx="150" cy="150"/>
+        </svg>
+        <div class="time-display">25:00</div>
+      </div>
+      
+      <div class="controls">
+        <button class="adj-btn" onclick="adjustTime(60)">+1m</button>
+        <button class="adj-btn" onclick="adjustTime(-60)">-1m</button>
+        <button class="adj-btn" onclick="resetTimer()">Reset</button>
+      </div>
+
+      <div class="controls">
+        <button class="start-stop-btn" onclick="startTimer()">Start</button>
+        <button class="start-stop-btn" onclick="stopTimer()">Stop</button>
+      </div>
+      
+      <div class="presets">
+        <button onclick="setPreset(420)">🔪 Round</button>
+        <button onclick="setPreset(300)">🗣️ Discussion</button>
+        <button onclick="setPreset(360)">🚽 Bathroom Break</button>
+        <button onclick="setPreset(900)">🍦 Food Break</button>
+      </div>
+    </section>
+
+    <nav class="tab-bar">
+        <a href="home.html" class="tab-item active">
+            <span class="icon">🏠</span><span class="label">Home</span>
+          </a>
+          </a>
+          <a href="DLC.html" class="tab-item">
+            <span class="icon">🎮</span><span class="label">Gamemodes</span>
+          </a>
+          <a href="hitman_night.html" class="tab-item">
+            <span class="icon">👥</span><span class="label">Schedule a Hitman night</span>
+          </a>
+          <a href="timer.html" class="tab-item">
+            <span class="icon">⏰</span><span class="label">Timer</span>
+    </nav>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

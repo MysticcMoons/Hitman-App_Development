@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitman</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container">
+    <h1>Calendar</h1>
+    <div class="calendar-header">
+        <button onclick="changeMonth(-1)">&#8249;</button>
+        <h2 id="month-year">April 2026</h2>
+        <button onclick="changeMonth(1)">&#8250;</button>
+    </div>
+    <div class="calendar-grid" id="calendar-grid">
+        <div class="day-name">Su</div><div class="day-name">Mo</div><div class="day-name">Tu</div>
+        <div class="day-name">We</div><div class="day-name">Th</div><div class="day-name">Fr</div><div class="day-name">Sa</div>
+    </div>
+    <div class="selected-date-info">
+        <h3 id="selected-date-text">Select a date</h3>
+        <div id="event-list"></div>
+        <button class="create-btn" onclick="openModal()">+ Add Event</button>
+    </div>
+    <div id="session-modal" class="modal hidden">
+        <div class="modal-content">
+        <h2>Add Event</h2>
+        <input type="text" id="event-input" placeholder="Hitman at Julia's">
+        <button onclick="saveEvent()" class="create-btn">Save Event</button>
+        <button onclick="closeModal()" style="background:#ccc;">Cancel</button>
+        </div>
+    </div>
+    <nav class="tab-bar">
+        <a href="home.html" class="tab-item active">
+            <span class="icon">🏠</span><span class="label">Home</span>
+          </a>
+          </a>
+          <a href="DLC.html" class="tab-item">
+            <span class="icon">🎮</span><span class="label">Gamemodes</span>
+          </a>
+          <a href="hitman_night.html" class="tab-item">
+            <span class="icon">👥</span><span class="label">Schedule a Hitman night</span>
+          </a>
+          <a href="timer.html" class="tab-item">
+            <span class="icon">⏰</span><span class="label">Timer</span>
+    </nav>
+    </main>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
